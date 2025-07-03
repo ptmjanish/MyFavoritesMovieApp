@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MovieListCell" customModule="MyFavouriteMovies" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="204" height="182"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="204" height="182"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ogm-z3-byg">
+                        <rect key="frame" x="0.0" y="0.0" width="204" height="128.33333333333334"/>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="L3X-LQ-J7w">
+                        <rect key="frame" x="16" y="128.33333333333334" width="172" height="43.666666666666657"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDA-3g-Zmm">
+                                <rect key="frame" x="0.0" y="0.0" width="172" height="23.333333333333332"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⭐️" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUF-Xz-joo">
+                                <rect key="frame" x="0.0" y="23.333333333333314" width="172" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AZc-cy-a0C">
+                        <rect key="frame" x="169" y="10" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="fqa-Tu-jtL"/>
+                            <constraint firstAttribute="width" constant="25" id="h3s-fP-pGK"/>
+                        </constraints>
+                        <color key="tintColor" systemColor="systemPinkColor"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system"/>
+                        <connections>
+                            <action selector="btnFavouriteTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="L4Z-Yl-rFk"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="L3X-LQ-J7w" firstAttribute="top" secondItem="ogm-z3-byg" secondAttribute="bottom" id="9Is-nb-zLw"/>
+                <constraint firstAttribute="trailing" secondItem="AZc-cy-a0C" secondAttribute="trailing" constant="10" id="FLQ-ty-Bnf"/>
+                <constraint firstAttribute="bottom" secondItem="L3X-LQ-J7w" secondAttribute="bottom" constant="10" id="Ga2-NL-2at"/>
+                <constraint firstItem="AZc-cy-a0C" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="H1m-fz-omb"/>
+                <constraint firstAttribute="trailing" secondItem="ogm-z3-byg" secondAttribute="trailing" id="Hhf-iL-ZP8"/>
+                <constraint firstItem="ogm-z3-byg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="HlF-ar-6OE"/>
+                <constraint firstAttribute="trailing" secondItem="L3X-LQ-J7w" secondAttribute="trailing" constant="16" id="fah-2Q-Y9c"/>
+                <constraint firstItem="L3X-LQ-J7w" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="fk1-jF-bQE"/>
+                <constraint firstItem="ogm-z3-byg" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="hIE-4h-9Gk"/>
+            </constraints>
+            <size key="customSize" width="204" height="182"/>
+            <connections>
+                <outlet property="btnFavourite" destination="AZc-cy-a0C" id="41a-dY-iSy"/>
+                <outlet property="labelRating" destination="aUF-Xz-joo" id="DVQ-Xc-IHM"/>
+                <outlet property="labelTitle" destination="eDA-3g-Zmm" id="QMq-4D-NaA"/>
+                <outlet property="movieImage" destination="ogm-z3-byg" id="TEI-T5-LRP"/>
+            </connections>
+            <point key="canvasLocation" x="254.96183206106869" y="45.070422535211272"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="heart" catalog="system" width="128" height="107"/>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
